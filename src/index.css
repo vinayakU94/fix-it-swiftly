@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* FixThis Design System - Professional & Corporate */
+
+@layer base {
+  :root {
+    /* FixThis Brand Colors (HSL converted from hex) */
+    /* Primary Green: #5DBB63 = 123 43% 55% */
+    /* Black: #000000 = 0 0% 0% */
+    /* Light Grey: #E5E5E5 = 0 0% 90% */
+    /* White: #FFFFFF = 0 0% 100% */
+
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    /* Primary is FixThis Green */
+    --primary: 123 43% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary is Light Grey */
+    --secondary: 0 0% 90%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 123 43% 95%;
+    --accent-foreground: 123 43% 35%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 123 43% 55%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 20%;
+    --sidebar-primary: 123 43% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 123 43% 95%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 123 43% 55%;
+
+    /* Custom FixThis tokens */
+    --fixthis-green: 123 43% 55%;
+    --fixthis-green-hover: 123 43% 48%;
+    --fixthis-black: 0 0% 0%;
+    --fixthis-grey: 0 0% 90%;
+    --fixthis-white: 0 0% 100%;
+
+    /* Status colors */
+    --status-pending: 45 93% 47%;
+    --status-progress: 217 91% 60%;
+    --status-success: 123 43% 55%;
+    --status-info: 199 89% 48%;
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 123 43% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 123 43% 15%;
+    --accent-foreground: 123 43% 75%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 123 43% 55%;
+
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 123 43% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 123 43% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 123 43% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
