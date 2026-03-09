@@ -1,2 +1,2 @@
-# Standard SPA redirect
+# Serve index.html for all non-file routes (SPA routing)
 /* /index.html 200
