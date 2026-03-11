@@ -13,6 +13,7 @@ import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import NotFound from "./pages/NotFound";
+import { InstallAppButton } from "./components/InstallAppButton";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,10 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
           <WhatsAppButton />
+          
+          {/* Your new Android Install Button! */}
+          <InstallAppButton />
+          
         </BrowserRouter>
       </TooltipProvider>
     </AuthProvider>
