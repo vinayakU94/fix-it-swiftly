@@ -12,6 +12,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+import { InstallAppButton } from "./InstallAppButton"; // adjust the path if needed
+
 export function Header() {
   const { user, signOut, isAdmin } = useAuth();
   const navigate = useNavigate();
@@ -51,8 +53,9 @@ export function Header() {
           </Link>
         </nav>
 
-        {/* Auth Buttons */}
+        {/* Desktop Auth Buttons (Includes Install App for Android Tablets) */}
         <div className="hidden md:flex items-center gap-4">
+          <InstallAppButton />
           {user ? (
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -87,16 +90,19 @@ export function Header() {
           )}
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-primary-foreground"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile Menu & Action Buttons */}
+        <div className="flex md:hidden items-center gap-3">
+          <InstallAppButton />
+          <button
+            className="text-primary-foreground flex items-center justify-center"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t bg-primary">
           <nav className="container flex flex-col py-4 gap-2">
